@@ -1,0 +1,26 @@
+<h1>HOMEPAGE</h1>
+
+<html>
+    <body>
+        <a href="#">QUESTION 1</a>
+
+        <p>LIST OF QUESTIONS HERE TO BE CLICKED</p>
+
+
+        <table>
+            <th>
+                <td>Questions</td>
+                <td>Answers Here</td>
+            </th>
+            {% for question in questions %}
+            <tr>
+                <td></td>
+                <td>{{question.question}}</td>
+                <td><a href="{% url 'question_page' question.id %}">ANSWER HERE</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+
+   
+    </body>
+</html>
